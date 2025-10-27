@@ -84,7 +84,7 @@ This experiment involves connecting a source drive (via a write-blocker, if avai
  - Choose the compression level if using E01 format.
 
  - Click Finish.
-![Fig-7](https://github.com/kiran77996/Digital-Forinces-lab-record/blob/main/img/Screenshot%20(49).png?raw=true)
+![Fig-7](https://github.com/kiran77996/Digital-Forinces-lab-record/blob/main/img/Screenshot%20(50).png?raw=true)
 **Verify Image Options**
 
  - FTK Imager will now show a summary of the settings you selected.
@@ -92,7 +92,7 @@ This experiment involves connecting a source drive (via a write-blocker, if avai
  - Review them carefully to make sure the correct drive and destination are selected.
 
  - Click Start to begin the imaging process.
-![Fig-8](<Output Screenshot/Exp1/Screenshot (55).png>)
+![Fig-8](https://github.com/kiran77996/Digital-Forinces-lab-record/blob/main/img/Screenshot%20(55).png?raw=true)
 **Imaging and Hash Verification**
 
  - FTK Imager will create the forensic image bit-by-bit from the source device.
@@ -106,7 +106,7 @@ This experiment involves connecting a source drive (via a write-blocker, if avai
  - After the process is finished, FTK Imager generates a log file containing all details (case info, hash values, acquisition time, etc.).
 
  - Save this log file along with the image, since it acts as proof of authenticity and integrity.
-![Fig-9](<Output Screenshot/Exp1/Screenshot 2025-08-31 174812.png>)
+![Fig-9](https://github.com/kiran77996/Digital-Forinces-lab-record/blob/main/img/Screenshot%202025-08-31%20174812.png?raw=true)
 
 ---
 
