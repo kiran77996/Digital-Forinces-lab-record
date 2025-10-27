@@ -1,88 +1,116 @@
-**Course / Lab:** Digital Forensics Lab  
-**Experiment No.:** 1  
-**Title:** Evidence Acquisition Using FTK Imager  
-
+# Experiment - 1
+# Create a forensic image of a storage device's using FTK Imager.
 ---
 
 ## Aim
-To capture RAM data and create a forensic disk image using FTK Imager.
-
----
-
-## Requirements
-- FTK Imager  
-- Windows operating system  
+To create a forensically sound bit-stream image of a storage device (e.g., USB drive, hard disk) using FTK Imager, ensuring data integrity through hash verification.
 
 ---
 
 ## Description
-- FTK Imager is a forensic acquisition tool used to create exact copies (disk images) of storage devices.  
-- It allows capturing RAM data, entire drives, or specific partitions without altering original evidence.  
-- Investigators use it to preview, preserve, and export data for further forensic analysis.  
+Disk imaging is the process of creating an exact, sector-by-sector copy of a storage device. This copy, known as a forensic image, is crucial for digital forensics as it preserves the original evidence in an unaltered state. This allows an investigator to perform analysis on the image without any risk of modifying the original source evidence.
+
+FTK Imager is a popular and widely used forensics tool developed by AccessData. It provides a user-friendly interface to create forensic images, verify their integrity using hash values (like MD5, SHA-1), and perform preliminary analysis.
+
+This experiment involves connecting a source drive (via a write-blocker, if available), using FTK Imager to create a forensic image file, and generating a hash value to prove the image is an exact copy of the original.
 
 ---
 
-## Part A — Acquiring Volatile Memory (RAM) Using FTK Imager
+## Tools & Equipment Used
+- FTK Imager (Software)
 
-**Step-1:** Right click on the FTK Imager tool and select **Run as administrator**.  
+- Source Drive: A USB flash drive (or hard disk) containing data.
 
-![images/exp1-disk-step1.png](https://github.com/baddiputi/Digital-Forensic-Lab-Exercises/blob/88dd3dcf55bf6caaf1833c97ad1758f771348668/images/WhatsApp%20Image%202025-08-30%20at%2000.00.09.jpeg)
+- Destination Drive: An external hard drive with sufficient free space to store the image file.
 
-**Step-2:** On the top menu bar, click **File** and select **Capture Memory** from the drop-down list.  
-
-![(images/exp1-ram-step2.png)](https://github.com/baddiputi/Digital-Forensic-Lab-Exercises/blob/88dd3dcf55bf6caaf1833c97ad1758f771348668/images/WhatsApp%20Image%202025-09-01%20at%2012.13.03.jpeg)
-
-**Step-3:** A dialog box will appear. Select the destination path to your file and provide the file name with `.mem` extension. (Pagefile and AD1 file options are optional.)  
-
-![(images/exp1-ram-step3.png)](https://github.com/baddiputi/Digital-Forensic-Lab-Exercises/blob/88dd3dcf55bf6caaf1833c97ad1758f771348668/images/WhatsApp%20Image%202025-09-01%20at%2012.14.14.jpeg)
-
-**Step-4:** Click the **Capture Memory** button to start acquisition of memory.  
-
-![(images/exp1-ram-step4.png)](https://github.com/baddiputi/Digital-Forensic-Lab-Exercises/blob/88dd3dcf55bf6caaf1833c97ad1758f771348668/images/WhatsApp%20Image%202025-09-01%20at%2012.14.40.jpeg)
-
-**Step-5:** A progress bar in green colour will indicate the capture status. The time taken to capture RAM depends on the system’s RAM size. After completion, the captured memory file will be available in the chosen destination folder.  
-
-![(images/exp1-ram-step5.png)](https://github.com/baddiputi/Digital-Forensic-Lab-Exercises/blob/a68fa1804f0037d81615f5246641cf397bafce5e/images/WhatsApp%20Image%202025-09-01%20at%2015.03.33.jpeg)
+### Link to download FTK Imager
+[Click to download](https://d1kpmuwb7gvu1i.cloudfront.net/Imgr/4.7.3.81%20Release/Exterro_FTK_Imager\_%28x64%29-4.7.3.81.exe)
 
 ---
 
-## Part B — Acquiring Non-Volatile Memory (Disk Image) Using FTK Imager
+## Procedure
+**Launch FTK Imager**
 
-**Step-1:** On the top right menu bar, click **File** and select **Create Disk Image** from the drop-down menu.  
+  - Open the FTK Imager tool on your computer.
+![Fig-1](<Output Screenshot/Exp1/Screenshot 2025-08-31 165800.png>)
+  - Make sure you run it with administrative privileges so that the tool can access hardware devices properly.
 
-![Step 1](https://github.com/baddiputi/Digital-Forensic-Lab-Exercises/blob/88dd3dcf55bf6caaf1833c97ad1758f771348668/images/WhatsApp%20Image%202025-09-01%20at%2012.15.39.jpeg)
+**Select the Source Drive**
 
-**Step-2:** In the dialog box, choose the source evidence type like **Physical Drive, Logical Drive, Image File, or Contents of a folder**.  
+  - From the top menu, go to File → Create Disk Image.
+![Fig-2](<Output Screenshot/Exp1/Screenshot (45).png>)
+  - In the dialog box, choose the type of source. Usually, for a physical storage device, select Physical Drive.
+![Fig-3](<Output Screenshot/Exp1/Screenshot (46).png>)
+ - Click Next.
 
-![(images/exp1-disk-step2.png)](https://github.com/baddiputi/Digital-Forensic-Lab-Exercises/blob/88dd3dcf55bf6caaf1833c97ad1758f771348668/images/WhatsApp%20Image%202025-09-01%20at%2012.16.01.jpeg)
+ - A list of available drives will appear. Select the storage device that you want to acquire and then click Finish.
+![Fig-4](<Output Screenshot/Exp1/Screenshot (47).png>)
 
-**Step-3:** Select the drive you want to image and click **Finish**.  
+**Choose the Image Destination**
 
-![(images/exp1-disk-step3.png)](https://github.com/baddiputi/Digital-Forensic-Lab-Exercises/blob/88dd3dcf55bf6caaf1833c97ad1758f771348668/images/WhatsApp%20Image%202025-09-01%20at%2012.16.15.jpeg)
-
-**Step-4:** In the **Create Image** dialog, click **Add** to define image type. 
-
-![(images/exp1-disk-step4.png)](https://github.com/baddiputi/Digital-Forensic-Lab-Exercises/blob/88dd3dcf55bf6caaf1833c97ad1758f771348668/images/WhatsApp%20Image%202025-09-01%20at%2012.16.31.jpeg)
-
-**Step-5:** Select the image type from the dialog box (Raw / SMART / E01 / AFF). Among all, **E01 is recommended**. 
-
-![(images/exp1-disk-step5.png)](https://github.com/baddiputi/Digital-Forensic-Lab-Exercises/blob/88dd3dcf55bf6caaf1833c97ad1758f771348668/images/WhatsApp%20Image%202025-09-01%20at%2012.17.14.jpeg)
-
-**Step-6:** Fill in the case information (Case Number, Evidence Number, Examiner Name, Unique Description, Notes) and click **Next**.  
-
-![(images/exp1-disk-step6.png)](https://github.com/baddiputi/Digital-Forensic-Lab-Exercises/blob/88dd3dcf55bf6caaf1833c97ad1758f771348668/images/WhatsApp%20Image%202025-09-01%20at%2012.17.24.jpeg)
-
-**Step-7:** Choose the destination folder and give a file name for the image.  
-
-![(images/exp1-disk-step7.png)](https://github.com/baddiputi/Digital-Forensic-Lab-Exercises/blob/88dd3dcf55bf6caaf1833c97ad1758f771348668/images/WhatsApp%20Image%202025-09-01%20at%2012.17.38.jpeg)
-
-**Step-8:** Set options like compression, splitting size, and click **Finish**. After that, click **Start** to begin the imaging process.  
-
-![(images/exp1-disk-step8.png)](https://github.com/baddiputi/Digital-Forensic-Lab-Exercises/blob/88dd3dcf55bf6caaf1833c97ad1758f771348668/images/WhatsApp%20Image%202025-09-01%20at%2012.18.06.jpeg)
+ - Once the source is added, FTK Imager will ask you to specify where the image should be saved.
 
 
-FTK Imager will display progress along with hash values. The imaging process may take time depending on the drive size. After completion, FTK Imager verifies the hash values automatically to maintain forensic integrity. Finally, the hash values should match.  
+ - Click Add, then select the desired Image Type. Common choices include:
+
+    - E01 (EnCase Evidence File format) → widely used in forensics.
+
+    - RAW (dd format) → bit-by-bit copy.
+![Fig-5](<Output Screenshot/Exp1/Screenshot (48).png>)
+   - Click Next.
+
+**Enter Case Information Optional but Recommended**
+
+  -  A window will prompt for case details like:
+
+    - Case Number
+
+    - Evidence Number
+
+    - Examiner Name
+
+    - Notes (e.g., description of the device).
+
+    - Fill in the details for proper documentation, then click Next.
+![Fig-6](<Output Screenshot/Exp1/Screenshot (49).png>)
+**Set Destination Path and File Name**
+
+ - Browse and select the folder where you want to save the forensic image.
+
+ - Provide a meaningful file name (e.g., USB_8GB_Evidence.E01).
+
+ - Specify a segment size if required (default is fine in most cases).
+
+ - Choose the compression level if using E01 format.
+
+ - Click Finish.
+![Fig-7](<Output Screenshot/Exp1/Screenshot (50).png>)
+**Verify Image Options**
+
+ - FTK Imager will now show a summary of the settings you selected.
+
+ - Review them carefully to make sure the correct drive and destination are selected.
+
+ - Click Start to begin the imaging process.
+![Fig-8](<Output Screenshot/Exp1/Screenshot (55).png>)
+**Imaging and Hash Verification**
+
+ - FTK Imager will create the forensic image bit-by-bit from the source device.
+
+ - Once completed, it will automatically calculate cryptographic hashes (MD5, SHA1) for both the source and the image.
+
+ - Verify that the hashes match to confirm the integrity of the forensic image.
+
+**Save the Log File**
+
+ - After the process is finished, FTK Imager generates a log file containing all details (case info, hash values, acquisition time, etc.).
+
+ - Save this log file along with the image, since it acts as proof of authenticity and integrity.
+![Fig-9](<Output Screenshot/Exp1/Screenshot 2025-08-31 174812.png>)
 
 ---
 
-  
+## Result 
+ - A forensic image of the selected storage device is successfully created using FTK Imager, along with hash verification and log documentation.
+
+ ---
