@@ -44,7 +44,7 @@ It helps investigators and administrators analyze active processes, detect suspi
    - 🟥 **Red** — Terminated processes  
    - 🟦 **Light Blue** — Processes running under the current user  
    - 🟪 **Pink** — Suspended processes
-![images/exp1-disk-step1.png](https://github.com/baddiputi/Digital-Forensic-Lab-Exercises/blob/20813074f7e55b479108660a16f276f69e56ad41/images/9.1.jpeg)
+![images/exp1-disk-step1.png](https://github.com/kiran77996/Digital-Forinces-lab-record/blob/main/img/9.1.jpeg?raw=true)
 ---
 
 ### **Step 3: Identify Suspicious Processes**
@@ -58,7 +58,7 @@ It helps investigators and administrators analyze active processes, detect suspi
 5. Check for **Digital Signature**:
    - Valid signature = trusted developer  
    - No signature or invalid = possibly malicious
-![images/exp9-disk-step2.png](https://github.com/baddiputi/Digital-Forensic-Lab-Exercises/blob/326db74a3770e2ba22207f5a48b737f17307f683/images/9.10.jpeg)
+![images/exp9-disk-step2.png](https://github.com/kiran77996/Digital-Forinces-lab-record/blob/main/img/9.10.jpeg?raw=true)
 ---
 
 ### **Step 4: Analyze Process Behavior**
@@ -67,7 +67,7 @@ It helps investigators and administrators analyze active processes, detect suspi
 3. Right-click the process → **Properties** → go to the **TCP/IP tab**.
    - Check if it communicates with **unknown external IP addresses**.
 4. Examine **Handles** and **DLLs** tabs for suspicious loaded files or libraries.
-![images/exp9-disk-step2.png](https://github.com/baddiputi/Digital-Forensic-Lab-Exercises/blob/326db74a3770e2ba22207f5a48b737f17307f683/images/9.4.jpeg)
+![images/exp9-disk-step2.png](https://github.com/kiran77996/Digital-Forinces-lab-record/blob/main/img/9.4.jpeg?raw=true)
 ---
 
 ### **Step 5: Verify Process Legitimacy**
@@ -76,7 +76,7 @@ It helps investigators and administrators analyze active processes, detect suspi
 2. Visit 🔗 [https://www.virustotal.com](https://www.virustotal.com)
    - Upload the process file or search its name to verify if it’s reported as malware.
 3. Cross-check with **ProcessLibrary.com** or official vendor websites for authenticity.
-![images/exp9-disk-step2.png](https://github.com/baddiputi/Digital-Forensic-Lab-Exercises/blob/326db74a3770e2ba22207f5a48b737f17307f683/images/9.6.jpeg)
+![images/exp9-disk-step2.png](https://github.com/kiran77996/Digital-Forinces-lab-record/blob/main/img/9.6.jpeg?raw=true)
 ---
 
 ### **Step 6: Take Appropriate Action**
@@ -87,7 +87,7 @@ It helps investigators and administrators analyze active processes, detect suspi
    - Right-click → **Suspend Process** to stop it temporarily for investigation.
 3. **After removal:**
    - Run a **Full System Scan** using Windows Defender or Malwarebytes to ensure no remnants remain.
-![images/exp9-disk-step2.png](https://github.com/baddiputi/Digital-Forensic-Lab-Exercises/blob/326db74a3770e2ba22207f5a48b737f17307f683/images/9.8.jpeg)
+![images/exp9-disk-step2.png](https://github.com/kiran77996/Digital-Forinces-lab-record/blob/main/img/9.8.jpeg?raw=true)
 ---
 
 ### **Step 7: Example Observation**
@@ -98,7 +98,7 @@ You find `faangpath_simple_template.pdf` consuming 70% CPU.
 - **Network Activity:** Shows connections to unknown IPs in the TCP/IP tab  
 - **Online Check:** VirusTotal confirms it as a **known trojan**  
 - **Action Taken:** Suspended → Killed → Deleted file → Performed full antivirus scan  
-![images/exp9-disk-step2.png](https://github.com/baddiputi/Digital-Forensic-Lab-Exercises/blob/326db74a3770e2ba22207f5a48b737f17307f683/images/9.9.jpeg)
+![images/exp9-disk-step2.png](https://github.com/kiran77996/Digital-Forinces-lab-record/blob/main/img/9.9.jpeg?raw=true)
 ---
 
 
