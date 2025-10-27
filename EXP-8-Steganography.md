@@ -26,20 +26,20 @@
 2.  **Install Java:** Ensure JRE is installed on your machine.
 3.  **Prepare environment:** Place the `StegExpose.jar` file in a dedicated working folder.
 
-![images/exp1-disk-step1.png](https://github.com/Yaswanth767/Digital-Forensics/blob/main/8.1.png?raw=true)
+![images/exp1-disk-step1.png](https://github.com/kiran77996/Digital-Forinces-lab-record/blob/main/img/8.1.png?raw=true)
 
 ### 2. Select Images for Analysis
 
 * Collect the images you suspect might contain hidden data.
 * StegExpose supports common image formats such as **.png**, **.jpg**, and **.bmp**.
 
-![images/exp1-disk-step1.png](https://github.com/Yaswanth767/Digital-Forensics/blob/main/8.6.png?raw=true)
+![images/exp1-disk-step1.png](https://github.com/kiran77996/Digital-Forinces-lab-record/blob/main/img/8.6.png?raw=true)
 
 ### 3. Open Command Line or Terminal
 
 * Navigate to the folder where the `StegExpose.jar` file is located using your Command Prompt (Windows) or Terminal (Linux/macOS).
 
-![images/exp1-disk-step1.png](https://github.com/Yaswanth767/Digital-Forensics/blob/main/8.8.png?raw=true)
+![images/exp1-disk-step1.png](https://github.com/kiran77996/Digital-Forinces-lab-record/blob/main/img/8.8.png?raw=true)
 
 
 ### 4. Run StegExpose on an Image
@@ -75,7 +75,7 @@
     Result: 0.4
     Steganography likely present
     ```
-  ![images/exp1-disk-step1.png](https://github.com/Yaswanth767/Digital-Forensics/blob/main/8.10.png?raw=true)
+  ![images/exp1-disk-step1.png](https://github.com/kiran77996/Digital-Forinces-lab-record/blob/main/img/8.10.png?raw=true)
 
 ### 6. Batch Analysis (Multiple Images)
 
