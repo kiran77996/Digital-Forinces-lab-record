@@ -32,7 +32,7 @@ This experiment involves connecting a source drive (via a write-blocker, if avai
 **Launch FTK Imager**
 
   - Open the FTK Imager tool on your computer.
-![Fig-1](<Output Screenshot/Exp1/Screenshot 2025-08-31 165800.png>)
+![Fig-1](https://github.com/kiran77996/Digital-Forinces-lab-record/blob/main/img/Screenshot%202025-08-31%20165800.png?raw=true)
   - Make sure you run it with administrative privileges so that the tool can access hardware devices properly.
 
 **Select the Source Drive**
